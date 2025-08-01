@@ -1,0 +1,14 @@
+<%- include('layout', { body: `
+<h2>Login</h2>
+<form method="POST" action="/login">
+  <input name="username" placeholder="Username" required />
+  <input name="password" type="password" placeholder="Password" required />
+  <button type="submit">Login</button>
+</form>
+<a href="/register">Register</a>
+<script>
+  document.querySelector('a[href="/logout"]')?.addEventListener('click', e => {
+    if (!confirm('Are you sure you want to logout?')) e.preventDefault();
+  });
+</script>
+` }) %>

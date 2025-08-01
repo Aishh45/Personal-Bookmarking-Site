@@ -1,0 +1,9 @@
+<%- include('layout', { body: `
+<h2>Edit Bookmark</h2>
+<form method="POST" action="/bookmarks/edit/${bookmark._id}">
+  <input name="title" value="${bookmark.title}" placeholder="Title" required />
+  <input name="url" value="${bookmark.url}" type="url" placeholder="URL" required />
+  <button type="submit">Update</button>
+</form>
+<a href="/bookmarks">Back</a>
+` }) %>
